@@ -24,6 +24,7 @@ public class OrderState
     public void CancelConfigurePizzaDialog()
     {
         ConfiguringPizza = null;
+
         ShowingConfigureDialog = false;
     }
 
@@ -35,13 +36,14 @@ public class OrderState
         ShowingConfigureDialog = false;
     }
 
+    public void ResetOrder()
+    {
+        Order = new Order();
+    }
+
     public void RemoveConfiguredPizza(Pizza pizza)
     {
         Order.Pizzas.Remove(pizza);
     }
 
-    public void ResetOrder()
-    {
-        Order = new Order();
-    }
 }
